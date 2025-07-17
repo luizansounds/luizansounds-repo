@@ -13,7 +13,7 @@ if [[ $1 == 'add' ]]; then
 	repo-add $repo_name.db.tar.zst ./*/*pkg.tar.zst
 	mv ./$repo_name.db.tar.zst ./x86_64/$repo_name.db
 	mv ./$repo_name.files.tar.zst ./x86_64/$repo_name.files
-	#rm -rf $repo_name.db
+	rm -rf $repo_name.db
 	#rm -rf $repo_name.files
 	git add .
 	git commit -m "UPDATE REPOSITORY"
