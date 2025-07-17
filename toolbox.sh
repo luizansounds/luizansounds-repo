@@ -11,10 +11,10 @@ if [[ $1 == 'add' ]]; then
     cp ./*/*/*.pkg.tar.zst ./x86_64/
     cp ./*/*/*.pkg.tar.zst.sig ./x86_64/
 	repo-add $repo_name.db.tar.zst ./*/*pkg.tar.zst
-	rm -rf $repo_name.db
-	rm -rf $repo_name.files
 	mv ./$repo_name.db.tar.zst ./x86_64/$repo_name.db
 	mv ./$repo_name.files.tar.zst ./x86_64/$repo_name.files
+	rm -rf $repo_name.db
+	rm -rf $repo_name.files
 	git add .
 	git commit -m "UPDATE REPOSITORY"
 	git push
